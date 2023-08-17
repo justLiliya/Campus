@@ -7,17 +7,18 @@ public class Student implements Studyble, Readable {
 
     private String professor;
     private String educationalInstitution;
+    private String scholarReport;
 
     @Override
-    public void study(){
+    public void study() {
         read();
-        System.out.println("Сдал доклад по теме профессору "+ getProfessor() + "у!");
+        System.out.println("Сдал доклад по теме профессору " + getProfessor() + "у!");
     }
 
     @Override
-    public void read(){
+    public void read() {
         getEducationalInstitution();
-        System.out.println("Читал переписку Ленина с Каутским в библиотеке " + educationalInstitution + "a Долго думал.");
+        System.out.println("Читал " + getScholarReport() + " в библиотеке " + educationalInstitution + "a. Долго думал.");
     }
 
     public String getProfessor() {
@@ -35,6 +36,15 @@ public class Student implements Studyble, Readable {
 
     public Student setEducationalInstitution(String educationalInstitution) {
         this.educationalInstitution = educationalInstitution;
+        return this;
+    }
+
+    public String getScholarReport() {
+        return scholarReport;
+    }
+
+    public Student setScholarReport(String scholarReport) {
+        this.scholarReport = scholarReport;
         return this;
     }
 }

@@ -2,5 +2,5 @@ package ru.khlebnikova.campus.util;
 
 public interface Teachable {
 
-    void teach();
+    public void teach(String scholar, String report);
 }
