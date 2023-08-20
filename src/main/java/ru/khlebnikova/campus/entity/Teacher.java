@@ -5,59 +5,36 @@ import ru.khlebnikova.campus.util.Teachable;
 
 public class Teacher implements Readable, Teachable {
 
-    private String scholar;
-    private String educationalInstitution;
-    private String report;
-    private int coutnOfsheets;
+    Student student;
+    University univer;
+    private int coutnSheets;
+    public final String name = "Анатолий Петрович";
 
-    public String getScholar() {
-        return scholar;
+
+    public int getCoutSheets() {
+        return coutnSheets;
     }
 
-    public Teacher setScholar(String scholar) {
-        this.scholar = scholar;
-        return this;
+    public void setCoutSheets(int coutnSheets) {
+        this.coutnSheets = coutnSheets;
     }
 
-    public String getEducationalInstitution() {
-        return educationalInstitution;
-    }
-
-    public Teacher setEducationalInstitution(String educationalInstitution) {
-        this.educationalInstitution = educationalInstitution;
-        return this;
-    }
-
-    public String getReport() {
-        return report;
-    }
-
-    public Teacher setReport(String report) {
-        this.report = report;
-        return this;
-    }
-
-    public int getCoutnOfsheets() {
-        return coutnOfsheets;
-    }
-
-    public Teacher setCoutnOfsheets(int coutnOfsheets) {
-        this.coutnOfsheets = coutnOfsheets;
-        return this;
+    public String getTeacherName(){
+        return name;
     }
 
     @Override
     public void read() {
         int coutnOfsheets = (int) (Math.random() * 100);
         if (coutnOfsheets <= 0) {
-            coutnOfsheets = 1;
+            setCoutSheets(1);
         }
-        System.out.println("Прочитал в библиотеке " + coutnOfsheets + " листов новой книги коллеги");
+        System.out.println("Прочитал в библиотеке " + getCoutSheets() + " листов новой книги коллеги");
 
     }
 
     @Override
-    public void teach(String scholar, String report) {
-        System.out.println("Студент " + scholar + " принес на проверку работу про " + report + ". Скука смертная!");
+    public void teach() {
+        System.out.println("Студент " + student.getStudentName() + " принес на проверку работу про " + student.getScholarReport() + ". Скука смертная!");
     }
 }

@@ -2,6 +2,11 @@ package ru.khlebnikova.campus.entity;
 
 public class University {
 
-    private String scholar;
-    private String lecturer;
+    Teacher professor;
+    Student student;
+    public final String univerName = "МГУ";
+
+    public String getUniverName() {
+        return univerName;
+    }
 }

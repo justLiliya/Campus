@@ -5,46 +5,29 @@ import ru.khlebnikova.campus.util.Studyble;
 
 public class Student implements Studyble, Readable {
 
-    private String professor;
-    private String educationalInstitution;
-    private String scholarReport;
+    Teacher professor;
+    University univer;
+    private final String scholarReport = "Переписку Ленина с Каутским";
+    public final String name = "Феофанов";
 
     @Override
     public void study() {
         read();
-        System.out.println("Сдал доклад по теме профессору " + getProfessor() + "у!");
+        System.out.println("Сдал доклад по теме профессору " + professor.getTeacherName() + "у!");
     }
 
     @Override
     public void read() {
-        getEducationalInstitution();
-        System.out.println("Читал " + getScholarReport() + " в библиотеке " + educationalInstitution + "a. Долго думал.");
+        System.out.println("Читал " + getScholarReport() + " в библиотеке " +  univer.getUniverName() + ". Долго думал.");
     }
 
-    public String getProfessor() {
-        return professor;
-    }
-
-    public Student setProfessor(String professor) {
-        this.professor = professor;
-        return this;
-    }
-
-    public String getEducationalInstitution() {
-        return educationalInstitution;
-    }
-
-    public Student setEducationalInstitution(String educationalInstitution) {
-        this.educationalInstitution = educationalInstitution;
-        return this;
-    }
 
     public String getScholarReport() {
         return scholarReport;
     }
 
-    public Student setScholarReport(String scholarReport) {
-        this.scholarReport = scholarReport;
-        return this;
+
+    public String getStudentName(){
+        return name;
     }
 }
