@@ -10,9 +10,20 @@ public class _Main {
         Student student = new Student();
         Teacher teacher = new Teacher();
         University univer = new University();
+        student.setScolarReport("Переписку Ленина с Каутским");
+        student.setName("Феофанов");
+        student.setUniver("МГУ");
+        student.getStudentName();
+        student.getScholarReport();
+        student.getUniver();
 
+
+
+        //teacher.read();
+        //teacher.teach();
         student.study();
-        teacher.read();
-        teacher.teach();
+
+
+
     }
 }

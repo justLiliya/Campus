@@ -5,31 +5,58 @@ import ru.khlebnikova.campus.util.Teachable;
 
 public class Teacher implements Readable, Teachable {
 
-    Student student;
-    University univer;
-    private int coutnSheets;
-    public final String name = "Анатолий Петрович";
-
+    private Student student;
+    private University univer;
+    private int countSheets;
+    private String name;
 
     public int getCoutSheets() {
-        return coutnSheets;
+        return countSheets;
     }
 
-    public void setCoutSheets(int coutnSheets) {
-        this.coutnSheets = coutnSheets;
+    public Teacher setStudent(Student student) {
+        this.student = student;
+        return this;
     }
 
-    public String getTeacherName(){
+    public Teacher setUniver(University univer) {
+        this.univer = univer;
+        return this;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public University getUniver() {
+        return univer;
+    }
+
+    public int getCountSheets() {
+        return countSheets;
+    }
+
+    public Teacher setCountSheets(int countSheets) {
+        this.countSheets = countSheets;
+        return this;
+    }
+
+    public Teacher setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public String getName(){
         return name;
     }
 
     @Override
     public void read() {
-        int coutnOfsheets = (int) (Math.random() * 100);
-        if (coutnOfsheets <= 0) {
-            setCoutSheets(1);
+        int countSheets = (int) (Math.random() * 100);
+        if (countSheets <= 0) {
+            countSheets = 1;
         }
-        System.out.println("Прочитал в библиотеке " + getCoutSheets() + " листов новой книги коллеги");
+        System.out.println("Прочитал в библиотеке " + countSheets + " листов новой книги коллеги");
 
     }
 
