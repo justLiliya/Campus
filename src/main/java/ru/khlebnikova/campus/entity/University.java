@@ -6,6 +6,9 @@ public class University {
     private Student student;
     public String univerName;
 
+    public University(String univerName) {
+        this.univerName = univerName;
+    }
 
     public String getUniverName() {
         return univerName;

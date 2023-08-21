@@ -7,23 +7,25 @@ import ru.khlebnikova.campus.entity.University;
 public class _Main {
 
     public static void main(String[] args) {
-        Student student = new Student();
-        Teacher teacher = new Teacher();
-        University univer = new University();
-        student.setScolarReport("Переписку Ленина с Каутским");
-        student.setName("Феофанов");
-        student.setUniver("МГУ");
-        student.getStudentName();
-        student.getScholarReport();
-        student.getUniver();
-
-
-
-        //teacher.read();
-        //teacher.teach();
+        Teacher teacher = new Teacher(0, "Марлен Витольдович");
+        University univer = new University("МГУ");
+        Student student = new Student(teacher, univer, "Переписку Ленина с Каутским", "Феофанов");
+        student.setUniver(univer.getUniverName());
+        student.setTeacher(teacher.getName());
         student.study();
+        teacher.teach(" учу студентов уму-разуму!");
+        teacher.read();
 
+        System.out.println("---------------------------------------------------------------------");
 
+        Teacher teacher1 = new Teacher(0, "Васисуалий Евдокимович");
+        University univer1 = new University("СПБГУ");
+        Student student1 = new Student(teacher, univer, "Разведение шелковичных червей", "Антонов");
+        student1.setUniver(univer1.getUniverName());
+        student1.setTeacher(teacher1.getName());
+        student1.study();
+        teacher1.teach(" учу студентов практике выращивания червей");
+        teacher1.read();
 
     }
 }

@@ -10,35 +10,39 @@ public class Teacher implements Readable, Teachable {
     private int countSheets;
     private String name;
 
+    public Teacher(int countSheets, String name) {
+        this.student = student;
+        this.univer = univer;
+        this.countSheets = countSheets;
+        this.name = name;
+    }
+
     public int getCoutSheets() {
         return countSheets;
     }
 
-    public Teacher setStudent(Student student) {
-        this.student = student;
-        return this;
+    public void setStudent(String stu) {
+        student.setName(stu);
     }
 
-    public Teacher setUniver(University univer) {
-        this.univer = univer;
-        return this;
+    public String getStudent() {
+        return student.getStudentName();
     }
 
-    public Student getStudent() {
-        return student;
+    public void setUniver(String un) {
+        univer.setUniverName(un);
     }
 
-    public University getUniver() {
-        return univer;
+    public String getUniver() {
+        return univer.getUniverName();
     }
 
     public int getCountSheets() {
         return countSheets;
     }
 
-    public Teacher setCountSheets(int countSheets) {
+    public void setCountSheets(int countSheets) {
         this.countSheets = countSheets;
-        return this;
     }
 
     public Teacher setName(String name) {
@@ -46,7 +50,7 @@ public class Teacher implements Readable, Teachable {
         return this;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
@@ -61,7 +65,7 @@ public class Teacher implements Readable, Teachable {
     }
 
     @Override
-    public void teach() {
-        System.out.println("Студент " + student.getStudentName() + " принес на проверку работу про " + student.getScholarReport() + ". Скука смертная!");
+    public void teach(String speak) {
+        System.out.println("Я " + name + speak);
     }
 }
