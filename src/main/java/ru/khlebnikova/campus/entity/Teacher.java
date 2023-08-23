@@ -25,16 +25,16 @@ public class Teacher implements Readable, Teachable {
         student.setName(stu);
     }
 
-    public String getStudent() {
-        return student.getStudentName();
+    public Student getStudent() {
+        return this.student = student;
     }
 
-    public void setUniver(String un) {
-        univer.setUniverName(un);
+    public void setUniver(University univer) {
+        this.univer = univer;
     }
 
-    public String getUniver() {
-        return univer.getUniverName();
+    public University getUniver() {
+        return this.univer = univer;
     }
 
     public int getCountSheets() {

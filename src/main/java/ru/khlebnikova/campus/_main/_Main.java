@@ -10,8 +10,8 @@ public class _Main {
         Teacher teacher = new Teacher(0, "Марлен Витольдович");
         University univer = new University("МГУ");
         Student student = new Student(teacher, univer, "Переписку Ленина с Каутским", "Феофанов");
-        student.setUniver(univer.getUniverName());
-        student.setTeacher(teacher.getName());
+        student.setUniver(univer);
+        student.setTeacher(teacher);
         student.study();
         teacher.teach(" учу студентов уму-разуму!");
         teacher.read();
@@ -21,11 +21,10 @@ public class _Main {
         Teacher teacher1 = new Teacher(0, "Васисуалий Евдокимович");
         University univer1 = new University("СПБГУ");
         Student student1 = new Student(teacher, univer, "Разведение шелковичных червей", "Антонов");
-        student1.setUniver(univer1.getUniverName());
-        student1.setTeacher(teacher1.getName());
+        student1.setUniver(univer1);
+        student1.setTeacher(teacher1);
         student1.study();
         teacher1.teach(" учу студентов практике выращивания червей");
         teacher1.read();
-
     }
 }

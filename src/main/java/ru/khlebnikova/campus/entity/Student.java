@@ -17,20 +17,20 @@ public class Student implements Studyble, Readable {
         this.name = name;
     }
 
-    public void setUniver(String un) {
-        univer.setUniverName(un);
+    public void setUniver(University univer) {
+        this.univer = univer;
     }
 
-    public String getTeacher() {
-        return teacher.getName();
+    public Teacher getTeacher() {
+        return this.teacher = teacher;
     }
 
-    public void setTeacher(String teachers) {
-        teacher.setName(teachers);
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
     }
 
-    public String getUniver() {
-        return univer.getUniverName();
+    public University getUniver() {
+        return this.univer = univer;
     }
 
     public String getScholarReport() {
