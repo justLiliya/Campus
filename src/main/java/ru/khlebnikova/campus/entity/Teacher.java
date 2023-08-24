@@ -9,10 +9,12 @@ public class Teacher implements Readable, Teachable {
     private University univer;
     private int countSheets;
     private String name;
+    private String speak;
 
-    public Teacher(int countSheets, String name) {
+    public Teacher(int countSheets, String name, String speak) {
         this.countSheets = countSheets;
         this.name = name;
+        this.speak = speak;
     }
 
     public int getCoutSheets() {
@@ -63,7 +65,7 @@ public class Teacher implements Readable, Teachable {
     }
 
     @Override
-    public void teach(String speak) {
-        System.out.println("Я " + name + speak);
+    public void teach() {
+        System.out.println("Я - преподаватель " + name + speak);
     }
 }
