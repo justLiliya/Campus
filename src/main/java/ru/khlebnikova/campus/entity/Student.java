@@ -10,9 +10,7 @@ public class Student implements Studyble, Readable {
     private String scholarReport;
     private String name;
 
-    public Student(Teacher teacher, University univer, String scholarReport, String name) {
-        this.teacher = teacher;
-        this.univer = univer;
+    public Student(String scholarReport, String name) {
         this.scholarReport = scholarReport;
         this.name = name;
     }

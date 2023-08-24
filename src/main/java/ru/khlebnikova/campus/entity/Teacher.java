@@ -11,8 +11,6 @@ public class Teacher implements Readable, Teachable {
     private String name;
 
     public Teacher(int countSheets, String name) {
-        this.student = student;
-        this.univer = univer;
         this.countSheets = countSheets;
         this.name = name;
     }
