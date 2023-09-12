@@ -10,9 +10,14 @@ public class Student implements Studyble, Readable {
     private String scholarReport;
     private String name;
 
-    public Student(String scholarReport, String name) {
+    public Student(String scholarReport, String name, University univer, Teacher teacher) {
         this.scholarReport = scholarReport;
         this.name = name;
+        this.univer = univer;
+        this.teacher = teacher;
+    }
+
+    public Student(Studyble st, Readable rd) {
     }
 
     public void setUniver(University univer) {
@@ -49,7 +54,6 @@ public class Student implements Studyble, Readable {
 
     @Override
     public void study() {
-        read();
         System.out.println("Сдал доклад по теме профессору " + teacher.getName() + "у!");
     }
 

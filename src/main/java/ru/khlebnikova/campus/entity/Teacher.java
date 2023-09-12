@@ -11,10 +11,11 @@ public class Teacher implements Readable, Teachable {
     private String name;
     private String speak;
 
-    public Teacher(int countSheets, String name, String speak) {
+    public Teacher(int countSheets, String name, String speak, University univer) {
         this.countSheets = countSheets;
         this.name = name;
         this.speak = speak;
+        this.univer = univer;
     }
 
     public int getCoutSheets() {

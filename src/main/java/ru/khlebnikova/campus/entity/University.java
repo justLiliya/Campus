@@ -17,4 +17,20 @@ public class University {
     public void setUniverName(String univerName) {
         this.univerName = univerName;
     }
+    public Teacher getTeacher() {
+        return this.teacher = teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
+
+    public void setStudent(String stu) {
+        student.setName(stu);
+    }
+
+    public Student getStudent() {
+        return this.student = student;
+    }
+
 }
